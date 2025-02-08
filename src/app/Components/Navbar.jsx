@@ -3,7 +3,7 @@ import Link from "next/link"
 import { useState } from "react"
 import { HiMiniBars3 } from 'react-icons/hi2'
 import { IoIosSearch } from 'react-icons/io'
-import logo from "../Assets/logo.png"
+import logo from "../../Assets/logo.png"
 import Image from "next/image"
 
 const Navbar = () => {
