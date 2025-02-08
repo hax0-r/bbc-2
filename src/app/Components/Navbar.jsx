@@ -8,6 +8,7 @@ import Image from "next/image"
 
 const Navbar = () => {
     const [responsiveNavbar, setResponsiveNavbar] = useState(false)
+    const [toggleNavbar, setToggleNavbar] = useState(false)
     return (
         <div className="">
             <div className="flex px-5 py-2 mx-auto md:flex-row flex-row-reverse items-center max-w-7xl w-full justify-between">
@@ -32,6 +33,25 @@ const Navbar = () => {
                     </Link>
                 </div>
             </div>
+
+            {
+                !toggleNavbar && (
+                    <div className="border-b md:block hidden fastFadeIn">
+                        <div className="md:px-10 px-5 py-1.5  mx-auto max-w-7xl w-full">
+                            <ul className='flex items-center justify-center gap-5 font-medium'>
+                                <li> <Link href={"/"}> Home</Link></li>
+                                <li> <Link href={"/news"}> News</Link></li>
+                                <li> <Link href={"/sport"}> Sport</Link></li>
+                                <li> <Link href={"/business"}> Business</Link></li>
+                                <li> <Link href={"/culture"}> Culture</Link></li>
+                                <li> <Link href={"/travel"}> Travel</Link></li>
+                                <li> <Link href={"/earth"}> Earth</Link></li>
+                            </ul>
+                        </div>
+                    </div>
+                )
+            }
+
         </div>
     )
 }
