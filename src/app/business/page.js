@@ -23,7 +23,9 @@ const Business = () => {
                     <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3 '>
                         {
                             filterData.slice(0, showMore).map((data) => (
-                                <Votes key={data.id} data={data} />
+                                <div key={data.id}>
+                                    <Votes data={data} />
+                                </div>
                             ))
                         }
                     </div>
