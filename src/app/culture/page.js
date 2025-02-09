@@ -17,14 +17,13 @@ const Culture = () => {
     return (
         <>
             <div>
+                <Navbar />
                 <div className='px-4 max-w-7xl w-full mx-auto  md:mt-14  mt-10 md:mb-10 mb-6'>
                     <h2 className='text-center font-semibold md:text-4xl text-2xl md:mb-10 mb-6'>Culture Content</h2>
                     <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3 '>
                         {
                             filterData.slice(0, showMore).map((data) => (
-                                <div key={data.id}>
-                                    <Votes data={data} />
-                                </div>
+                                <Votes key={data.id} data={data} />
                             ))
                         }
                     </div>
