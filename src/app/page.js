@@ -9,7 +9,6 @@ import { CARDS, SUB_CARDS } from "@/Data/Home";
 export default function Home() {
   return (
     <>
-      <Navbar />
       <div className="md:px-10 px-5 fastFadeIn">
           <div className="max-w-7xl w-full pb-16 pt-5 mx-auto">
             <div className="mx-auto  flex items-start md:gap-5 gap-10 xl:flex-row flex-col">

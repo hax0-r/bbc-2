@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { HiMiniBars3 } from 'react-icons/hi2'
 import { IoIosSearch } from 'react-icons/io'
 import logo from "../../Assets/logo.png"
@@ -13,6 +13,17 @@ const Navbar = () => {
 
     const [responsiveNavbar, setResponsiveNavbar] = useState(false)
     const [toggleNavbar, setToggleNavbar] = useState(false)
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
     return (
         <div className="">
             <div className="flex px-5 py-2 mx-auto md:flex-row flex-row-reverse items-center max-w-7xl w-full justify-between">
@@ -90,7 +101,7 @@ const Navbar = () => {
                         <li> <Link onClick={() => setResponsiveNavbar(!responsiveNavbar)} className={`block  transition-all duration-500 p-3 rounded-lg hover:bg-zinc-100 `} href={"/earth"}> Earth</Link></li>
                     </ul>
                     {
-                        innerWidth < 768 && (
+                        isMobile < 768 && (
                             <div className="px-7 pb-3">
                                 <Link href={"/login"} onClick={() => setResponsiveNavbar(false)} className="hover:bg-black mb-2 hover:text-white text-lg py-3 rounded-md border-2 border-black font-medium tracking-wide transition-all duration-300 bg-white text-black w-full block text-center">
                                     Sign Up
