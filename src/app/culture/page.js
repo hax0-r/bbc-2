@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Navbar from '../Components/Navbar'
 import { POLL_DATA } from '@/Data/PollVotes'
 import Votes from '../Components/Votes'
