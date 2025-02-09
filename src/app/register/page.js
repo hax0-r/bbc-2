@@ -10,7 +10,7 @@ const Register = () => {
                     <IoClose className='absolute md:top-10 top-5 md:right-20 right-5 text-3xl cursor-pointer' />
                 </Link>
                 <section className="grid text-center  items-center p-4 w-full fastFadeIn">
-                    <div className='border-2 py-10 border-[#0000003f] mx-auto max-w-5xl w-full rounded-lg'>
+                    <div className='border-2 py-10 border-[#0000003f] md:mt-0 mt-8 mx-auto max-w-5xl w-full rounded-lg'>
                         <h3 className="text-3xl font-semibold mb-2 text-start px-5">Register</h3>
                         <p className="mb-10 text-gray-700 text-start px-5">
                             regsiter your account for sign in

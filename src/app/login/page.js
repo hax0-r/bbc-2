@@ -11,7 +11,7 @@ const Login = () => {
                 <IoClose className='absolute md:top-10 top-5 md:right-20 right-5 text-3xl cursor-pointer' />
             </Link>
             <section className="grid fastFadeIn text-center items-center md:p-10 p-4 w-full">
-                <div className="border-2 py-10 border-[#0000003f] mx-auto max-w-[35rem] w-full rounded-lg">
+                <div className="border-2 md:mt-0 mt-8 py-10 border-[#0000003f] mx-auto max-w-[35rem] w-full rounded-lg">
                     <h3 className="text-3xl font-semibold mb-2">Sign In</h3>
                     <p className="mb-10 text-gray-700 px-3">
                         Enter your email and password to sign in
