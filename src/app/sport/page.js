@@ -1,8 +1,8 @@
 "use client"
 import React, { useState } from 'react'
-import Navbar from '../Components/Navbar'
 import { POLL_DATA } from '@/Data/PollVotes'
 import Votes from '../Components/Votes'
+import Subcategories from '../Components/Subcategories'
 
 const Sport = () => {
     const [showMore, setShowMore] = useState(9)
@@ -13,11 +13,19 @@ const Sport = () => {
 
     const filterData = POLL_DATA.filter((data) => data.category === 'Sports')
 
+    const sub_categories = [
+        { id: 1, name: "football" },
+        { id: 2, name: "basketball" },
+        { id: 3, name: "tennis" },
+        { id: 4, name: "cricket" },
+        { id: 5, name: "olympics" },
+        { id: 6, name: "motorsports" }
+    ];
 
     return (
         <>
             <div>
-                <Navbar />
+                <Subcategories categoriesName={sub_categories} />
                 <div className='px-4 max-w-7xl w-full mx-auto  md:mt-14  mt-10 md:mb-10 mb-6'>
                     <h2 className='text-center font-semibold md:text-4xl text-2xl md:mb-10 mb-6'>Sport Content</h2>
                     <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3 '>

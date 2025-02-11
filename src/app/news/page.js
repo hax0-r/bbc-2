@@ -1,8 +1,8 @@
 "use client"
 import React, { useState } from 'react'
-import Navbar from '../Components/Navbar'
 import { POLL_DATA } from '@/Data/PollVotes'
 import Votes from '../Components/Votes'
+import Subcategories from '../Components/Subcategories'
 
 const News = () => {
     const [showMore, setShowMore] = useState(9)
@@ -13,11 +13,24 @@ const News = () => {
 
     const filterData = POLL_DATA.filter((data) => data.category === 'News')
 
+    const sub_categories = [
+        { id: 1, name: "politics" },
+        { id: 2, name: "government" },
+        { id: 3, name: "war & conflicts" },
+        { id: 4, name: "economy" },
+        { id: 5, name: "technology" },
+        { id: 6, name: "environment" },
+        { id: 7, name: "health" },
+        { id: 8, name: "sports" },
+        { id: 9, name: "entertainment" },
+        { id: 10, name: "world news" }
+    ];
+    
 
     return (
         <>
             <div>
-                <Navbar />
+                <Subcategories categoriesName={sub_categories} />
                 <div className='px-4 max-w-7xl w-full mx-auto  md:mt-14  mt-10 md:mb-10 mb-6'>
                     <h2 className='text-center font-semibold md:text-4xl text-2xl md:mb-10 mb-6'>News Content</h2>
                     <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3 '>
