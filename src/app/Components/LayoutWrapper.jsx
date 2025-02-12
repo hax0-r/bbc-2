@@ -8,7 +8,7 @@ export default function LayoutWrapper({ children }) {
   const pathname = usePathname();
 
   // Define routes where Navbar and Footer should be hidden
-  const noLayoutRoutes = ["/login", "/signup"];
+  const noLayoutRoutes = ["/login", "/register"];
 
   // Check if the current pathname matches any of the noLayoutRoutes
   const hideLayout = noLayoutRoutes.includes(pathname);
